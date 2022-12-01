@@ -5463,6 +5463,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1121720977}
+  - component: {fileID: 1121720979}
+  - component: {fileID: 1121720978}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Untagged
@@ -5486,6 +5488,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1121720978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121720976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5980d1eae9461be45bb32befbbf27890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cart: {fileID: 1121720979}
+--- !u!114 &1121720979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121720976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e463a9986eada9e4c94e1ac8b5dab841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 50
+  venichleWidth: 1.1
 --- !u!1 &1506336185
 GameObject:
   m_ObjectHideFlags: 0
