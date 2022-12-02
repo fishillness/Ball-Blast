@@ -135,7 +135,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5375377839172309194, guid: 1b2f8a56937cc1342ac797469fae27c5, type: 3}
   shootPoint: {fileID: 4366109703102512722}
   fireRate: 0.3
-  projectileAmount: 6
+  projectileAmount: 1
   projectileInterval: 0.2
 --- !u!1 &7191011191049559133
 GameObject:
