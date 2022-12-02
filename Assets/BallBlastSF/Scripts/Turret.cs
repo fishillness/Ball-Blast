@@ -5,7 +5,6 @@ public class Turret : MonoBehaviour
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform shootPoint;
     [SerializeField] private float fireRate;
-
     [SerializeField] private int projectileAmount;
     [SerializeField] private float projectileInterval;
 
@@ -24,7 +23,6 @@ public class Turret : MonoBehaviour
         {
             Instantiate(projectilePrefab, new Vector3(startPosX + i * projectileInterval, shootPoint.position.y, shootPoint.position.z), transform.rotation);
         }
-
     }
 
     public void Fire()

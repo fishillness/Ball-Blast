@@ -48,8 +48,8 @@ public class Cart : MonoBehaviour
 
     private Vector3 ClampMovementTarget(Vector3 target)
     {
-        float leftBorder = -8.8f + venichleWidth * 0.5f;
-        float rightBorder = 8.8f - venichleWidth * 0.5f;
+        float leftBorder = LevelBoundary.Instance.LeftBorder + venichleWidth * 0.5f;
+        float rightBorder = LevelBoundary.Instance.RigthBorder - venichleWidth * 0.5f;
 
         Vector3 movTarget = target;
         movTarget.z = transform.position.z;
