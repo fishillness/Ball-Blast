@@ -352,6 +352,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &723406901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7865214918127108959, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
+  m_PrefabInstance: {fileID: 7191011191873805737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cc7ea01dd5bbb4b9ddcb141f601710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &855947490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5491,8 +5502,11 @@ MonoBehaviour:
   - {fileID: 1576018890}
   - {fileID: 481426275}
   - {fileID: 1521371633}
-  spawnRate: 2
+  spawnRate: 10
+  turret: {fileID: 723406901}
   amount: 6
+  minHitpointsPercentage: 0.803
+  maxHitpointsRate: 1
 --- !u!1 &1521371632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,6 +5797,10 @@ PrefabInstance:
     - target: {fileID: 7191011190768863033, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
       propertyPath: m_Name
       value: Cart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865214918127108959, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
+      propertyPath: damage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7865214918127108959, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
       propertyPath: projectileAmount

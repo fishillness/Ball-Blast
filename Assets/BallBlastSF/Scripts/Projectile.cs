@@ -4,7 +4,8 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float lifeTime;
-    [SerializeField] private int damage;
+    
+    private int damage;
 
     private void Start()
     {
@@ -26,5 +27,10 @@ public class Projectile : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    public void SetDamage(int damage)
+    {
+        this.damage = damage;
     }
 }
