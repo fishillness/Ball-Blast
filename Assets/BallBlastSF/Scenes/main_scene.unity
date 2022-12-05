@@ -237,7 +237,7 @@ Transform:
   - {fileID: 1014493072}
   - {fileID: 855947491}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -5557,9 +5557,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4366109703102512722, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.53
+      objectReference: {fileID: 0}
     - target: {fileID: 7191011190768863032, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7191011190768863032, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5604,6 +5608,10 @@ PrefabInstance:
     - target: {fileID: 7191011190768863033, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
       propertyPath: m_Name
       value: Cart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865214918127108959, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}
+      propertyPath: projectileAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87823d70dac0121488e1e26c78c8e59b, type: 3}

@@ -60,4 +60,14 @@ public class StoneMovement : MonoBehaviour
             }
         }
     }
+
+    public void AddVecticalVelocity(float velocity)
+    {
+        this.velocity.y += velocity;
+    }
+    public void SetHorizontalDiraction(float direction)
+    {
+        velocity.x = Mathf.Sign(direction) * horizontalSpeed;
+    }
+
 }

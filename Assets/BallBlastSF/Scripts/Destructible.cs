@@ -3,11 +3,14 @@ using UnityEngine.Events;
 
 public class Destructible : MonoBehaviour
 {
-    [SerializeField] private int maxHitPoints;
+    public int maxHitPoints;
 
-    public UnityEvent Die;
-    public UnityEvent ChangeHitPoints;
+    [HideInInspector] public UnityEvent Die;
+    [HideInInspector] public UnityEvent ChangeHitPoints;
+    
     private int hitPoints;
+    private bool isDie = false;
+
     private void Start()
     {
         hitPoints = maxHitPoints;
@@ -26,7 +29,10 @@ public class Destructible : MonoBehaviour
 
     public void Kill()
     {
+        if (isDie == true) return;
+
         hitPoints = 0;
+        isDie = true;
         ChangeHitPoints.Invoke();
         Die.Invoke();
     }
@@ -35,8 +41,5 @@ public class Destructible : MonoBehaviour
     {
         return hitPoints;
     }
-    public int GetMaxHitPoints()
-    {
-        return maxHitPoints;
-    }
+
 }
