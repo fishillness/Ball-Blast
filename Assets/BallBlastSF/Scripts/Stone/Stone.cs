@@ -52,7 +52,7 @@ public class Stone : Destructible
         }
     }
 
-    private void SetSize(Size size)
+    public void SetSize(Size size)
     {
         if (size < 0) return;
 
