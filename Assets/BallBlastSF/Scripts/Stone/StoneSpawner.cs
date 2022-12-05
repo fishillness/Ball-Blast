@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StoneSpawner : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class StoneSpawner : MonoBehaviour
     [SerializeField] private int amount;
     [SerializeField] [Range(0.0f, 1.0f)] private float minHitpointsPercentage;
     [SerializeField] private float maxHitpointsRate;
+
+    [Space(10)] public UnityEvent Completed;
 
     private float timer;
     private float amountSpawner;
@@ -40,6 +43,7 @@ public class StoneSpawner : MonoBehaviour
         if (amountSpawner == amount)
         {
             enabled = false;
+            Completed.Invoke();
         }
     }
 
