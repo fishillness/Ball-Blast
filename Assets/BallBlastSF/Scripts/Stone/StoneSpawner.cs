@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class StoneSpawner : MonoBehaviour
 {
+    [SerializeField] private LevelProgress levelProgress;
+
     [Header("Spawn")]
     [SerializeField] private Stone stonePrefab;
     [SerializeField] private Transform[] spawnPoints;
@@ -10,19 +12,20 @@ public class StoneSpawner : MonoBehaviour
     
     [Header("Balance")]
     [SerializeField] private Turret turret;
-    [SerializeField] private int amount;
     [SerializeField] [Range(0.0f, 1.0f)] private float minHitpointsPercentage;
     [SerializeField] private float maxHitpointsRate;
 
     [Space(10)] public UnityEvent Completed;
 
     private float timer;
-    private float amountSpawner;
+    private int amountSpawner;
     private int stoneMaxHitpoints;
     private int stoneMinHitpoints;
+    private int amount;
 
     private void Start()
     {
+        amount = levelProgress.CurrentLevel; 
         int damagePerSecond = (int) ( (turret.Damage * turret.ProjectileAmount) * (1 / turret.FireRate) );
 
         stoneMaxHitpoints = (int)(damagePerSecond * maxHitpointsRate);

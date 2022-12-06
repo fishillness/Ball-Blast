@@ -18,6 +18,7 @@ public class Stone : Destructible
 
     private StoneMovement movement;
 
+
     private void Awake()
     {
         movement = GetComponent<StoneMovement>();
