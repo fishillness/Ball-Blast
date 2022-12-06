@@ -37,7 +37,10 @@ public class Stone : Destructible
             SpawnStones();
         }
 
-        Instantiate(coinPrefab, gameObject.transform.position, Quaternion.identity);
+        int x = Random.Range(1, 3);
+        if (x == 1)
+            Instantiate(coinPrefab, gameObject.transform.position, Quaternion.identity);
+
         Destroy(gameObject);
     }
 
