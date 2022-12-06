@@ -363,7 +363,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 156926505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 688907885}
+        m_TargetAssemblyTypeName: UIShopPanel, Assembly-CSharp
+        m_MethodName: ButtonDamagePressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156926505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +562,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 150
+  m_Text: 0
 --- !u!222 &215884483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1696,13 +1708,14 @@ GameObject:
   - component: {fileID: 688907882}
   - component: {fileID: 688907884}
   - component: {fileID: 688907883}
+  - component: {fileID: 688907885}
   m_Layer: 5
   m_Name: ShopPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &688907882
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1772,6 +1785,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688907881}
   m_CullTransparentMesh: 1
+--- !u!114 &688907885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688907881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9001978675c2b3444a4590c72fb2b95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 723406901}
+  textCostRateOfFire: {fileID: 1056569965}
+  textCostDamage: {fileID: 215884482}
+  textCostProjectileAmount: {fileID: 1725502764}
+  costRateOfFire: 10
+  costDamage: 10
+  costProjectileAmount: 20
+  stepRateOfFire: 0.1
+  stepDamage: 1
+  stepProjectileAmount: 1
+  buttonRateOfFire: {fileID: 1788205990}
+  buttonDamage: {fileID: 156926504}
+  buttonProjectileAmount: {fileID: 1161386369}
 --- !u!1 &713620083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7100,7 +7138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 150
+  m_Text: 0
 --- !u!222 &1056569966
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7427,7 +7465,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1161386370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 688907885}
+        m_TargetAssemblyTypeName: UIShopPanel, Assembly-CSharp
+        m_MethodName: ButtonProjectileAmountPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1161386370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8892,7 +8942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 150
+  m_Text: 0
 --- !u!222 &1725502765
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9058,7 +9108,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1788205991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 688907885}
+        m_TargetAssemblyTypeName: UIShopPanel, Assembly-CSharp
+        m_MethodName: ButtonRateOfFirePressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1788205991
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,10 @@ public class Turret : MonoBehaviour
 
     private float timer;
 
+    private void Start()
+    {
+        Load();
+    }
     private void Update()
     {
         timer += Time.deltaTime;
@@ -40,4 +44,36 @@ public class Turret : MonoBehaviour
             timer = 0;
         }
     }
+
+    public void ImproveDamage(int value)
+    {
+        damage += value;
+        Save();
+    }
+
+    public void ImprovefireRate(float value)
+    {
+        fireRate += value;
+        Save();
+    }
+
+    public void ImproveProjectileAmount(int value)
+    {
+        projectileAmount += value;
+        Save();
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("Turret:damage", damage);
+        PlayerPrefs.SetFloat("Turret:fireRate", fireRate);
+        PlayerPrefs.SetInt("Turret:projectileAmount", projectileAmount);
+    }
+    private void Load()
+    {
+        damage = PlayerPrefs.GetInt("Turret:damage", 1);
+        fireRate = PlayerPrefs.GetFloat("Turret:fireRate", 0.1f);
+        projectileAmount = PlayerPrefs.GetInt("Turret:projectileAmount", 1);
+    }
+
 }
