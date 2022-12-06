@@ -193,9 +193,12 @@ MonoBehaviour:
   ChangeHitPoints:
     m_PersistentCalls:
       m_Calls: []
+  coinPrefab: {fileID: 5261208797590594532, guid: 02df9185d86d11345a5b1b9c013c22ff, type: 3}
   size: 3
   spawnUpForce: 3
-  coinPrefab: {fileID: 5261208797590594532, guid: 02df9185d86d11345a5b1b9c013c22ff, type: 3}
+  StoneDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5275563626871360432
 MonoBehaviour:
   m_ObjectHideFlags: 0

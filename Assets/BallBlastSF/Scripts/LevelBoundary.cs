@@ -30,7 +30,6 @@ public class LevelBoundary : MonoBehaviour
             return Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
         }
     }
-
     public float RigthBorder
     {
         get
@@ -45,8 +44,5 @@ public class LevelBoundary : MonoBehaviour
         Gizmos.DrawLine(new Vector3(LeftBorder, -10, 0), new Vector3(LeftBorder, 10, 0));
         Gizmos.DrawLine(new Vector3(RigthBorder, -10, 0), new Vector3(RigthBorder, 10, 0));
     }
-
 #endif
-
-
 }

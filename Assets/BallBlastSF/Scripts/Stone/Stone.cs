@@ -11,13 +11,11 @@ public class Stone : Destructible
         Huge
     }
 
-
     [SerializeField] private Coin coinPrefab;
     [SerializeField] private Size size;
     [SerializeField] private float spawnUpForce;
 
     private StoneMovement movement;
-
 
     private void Awake()
     {
@@ -43,6 +41,7 @@ public class Stone : Destructible
             Instantiate(coinPrefab, gameObject.transform.position, Quaternion.identity);
 
         Destroy(gameObject);
+        UILevelProgress.Instance.amountStoneDestroed++;
     }
 
     private void SpawnStones()
@@ -50,7 +49,6 @@ public class Stone : Destructible
         for (int i = 0; i < 2; i++)
         {
             Stone stone = Instantiate(this, transform.position, Quaternion.identity);
-            //Stone stone = Instantiate(stoneObject, transform.position, Quaternion.identity);
             stone.SetSize(size - 1);
             stone.maxHitPoints = Mathf.Clamp(maxHitPoints / 2, 1, maxHitPoints);
             stone.movement.AddVecticalVelocity(spawnUpForce);

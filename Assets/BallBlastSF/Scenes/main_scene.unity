@@ -8847,6 +8847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelProgress: {fileID: 819038884}
   stoneSpawner: {fileID: 1516703534}
+  stone: {fileID: 7264998941111671556, guid: c3f41fcbca2f1884fbc4b6867c32cb15, type: 3}
   currentLeveLText: {fileID: 797629231}
   nextLevelText: {fileID: 108909416}
   progressBar: {fileID: 1297228780}

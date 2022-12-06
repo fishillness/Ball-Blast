@@ -3,14 +3,18 @@ using UnityEngine.UI;
 
 public class UILevelProgress : MonoBehaviour
 {
+    public static UILevelProgress Instance;
+
     [SerializeField] private LevelProgress levelProgress;
     [SerializeField] private StoneSpawner stoneSpawner;
+    [SerializeField] private Stone stone;
 
     [SerializeField] private Text currentLeveLText;
     [SerializeField] private Text nextLevelText;
     [SerializeField] private Image progressBar;
 
-    //private float fillAmountStep;
+    public int amountStoneDestroed;
+    private float fillAmountStep;
 
     private void Start()
     {
@@ -18,18 +22,16 @@ public class UILevelProgress : MonoBehaviour
         nextLevelText.text = (levelProgress.CurrentLevel + 1).ToString();
         progressBar.fillAmount = 0;
 
-        //fillAmountStep = 1 / stoneSpawner.Amount;
+        amountStoneDestroed = 0;
+
+        fillAmountStep = 1f / (stoneSpawner.Amount * 16f);
+    }
+    private void Awake()
+    {
+        Instance = this;
     }
     private void Update()
     {
-        //progressBar.fillAmount = stoneSpawner.AmountSpawner / stoneSpawner.Amount;
-        progressBar.fillAmount = 1 - FindObjectsOfType<Stone>().Length / 100;
-        /* int stoneAmount = FindObjectsOfType<Stone>().Length;
-        if (stoneAmount != 0)
-        {
-            progressBar.fillAmount = 1 - 1 / stoneAmount;
-        }
-        else
-            progressBar.fillAmount = 1; */
+        progressBar.fillAmount = amountStoneDestroed * fillAmountStep;
     }
 }

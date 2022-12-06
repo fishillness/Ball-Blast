@@ -22,11 +22,14 @@ public class StoneSpawner : MonoBehaviour
     private int stoneMaxHitpoints;
     private int stoneMinHitpoints;
     private int amount;
+    public int Amount => amount;
+
+    private int damagePerSecond;
 
     private void Start()
     {
-        amount = levelProgress.CurrentLevel; 
-        int damagePerSecond = (int) ( (turret.Damage * turret.ProjectileAmount) * (1 / turret.FireRate) );
+        amount = levelProgress.CurrentLevel;        
+        damagePerSecond = (int) ( (turret.Damage * turret.ProjectileAmount) * (1 / turret.FireRate) );
 
         stoneMaxHitpoints = (int)(damagePerSecond * maxHitpointsRate);
         stoneMinHitpoints = (int)(stoneMaxHitpoints * minHitpointsPercentage);
@@ -53,7 +56,7 @@ public class StoneSpawner : MonoBehaviour
     private void Spawn()
     {
         Stone stone = Instantiate(stonePrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
-        stone.SetSize( (Stone.Size) Random.Range(1, 4) );
+        stone.SetSize(Stone.Size.Huge);
         stone.maxHitPoints = Random.Range(stoneMinHitpoints, stoneMaxHitpoints + 1);
         amountSpawner++;
     }

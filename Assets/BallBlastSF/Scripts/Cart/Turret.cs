@@ -72,8 +72,7 @@ public class Turret : MonoBehaviour
     private void Load()
     {
         damage = PlayerPrefs.GetInt("Turret:damage", 1);
-        fireRate = PlayerPrefs.GetFloat("Turret:fireRate", 0.1f);
+        fireRate = PlayerPrefs.GetFloat("Turret:fireRate", 0.3f);
         projectileAmount = PlayerPrefs.GetInt("Turret:projectileAmount", 1);
     }
-
 }
