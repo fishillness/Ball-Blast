@@ -12,6 +12,7 @@ public class Stone : Destructible
     }
 
 
+    [SerializeField] private Coin coinPrefab;
     [SerializeField] private Size size;
     [SerializeField] private float spawnUpForce;
 
@@ -36,6 +37,7 @@ public class Stone : Destructible
             SpawnStones();
         }
 
+        Instantiate(coinPrefab, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
